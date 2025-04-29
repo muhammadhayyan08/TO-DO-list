@@ -1,0 +1,153 @@
+/* RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* CONTAINER */
+.container {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* HEADER */
+h1 {
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-size: 1.6rem;
+  word-break: break-word;
+}
+
+/* ADD TODO FORM */
+.add-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.add-todo input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #764ba2;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-todo button {
+  padding: 0.6rem;
+  background: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-todo button:hover {
+  background: #667eea;
+}
+
+/* TODO LIST */
+.todo-list {
+  margin-top: 1.5rem;
+}
+
+.todo-item {
+  background: #f7f7f7;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-word;
+  flex-wrap: wrap;
+}
+
+.todo-item span {
+  flex: 1;
+  cursor: pointer;
+  text-align: left;
+  padding-right: 0.5rem;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e63946;
+}
+
+/* REMOVE ALL BUTTON */
+.remove-all {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.remove-all:hover {
+  background: #d62828;
+}
+
+/* EMPTY STATE */
+.empty {
+  color: #555;
+  margin-top: 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 400px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .add-todo input,
+  .add-todo button,
+  .remove-all {
+    font-size: 0.95rem;
+  }
+
+  .todo-item {
+    font-size: 0.95rem;
+  }
+
+  .todo-item button {
+    font-size: 1.1rem;
+  }
+}
